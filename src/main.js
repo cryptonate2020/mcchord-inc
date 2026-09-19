@@ -159,8 +159,12 @@ document.querySelectorAll(".video-frame[data-youtube]").forEach((frame) => {
     { once: true },
   );
 
-  trigger.addEventListener("click", (event) => {
+  const playInline = (event) => {
     event.preventDefault();
+    event.stopPropagation();
     loadYouTubePlayer(frame);
-  });
+  };
+
+  trigger.addEventListener("click", playInline);
+  trigger.addEventListener("auxclick", playInline);
 });
