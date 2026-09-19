@@ -8,7 +8,7 @@ This repo now holds a **clean static recreation** of [mcchordinc.com](https://ww
 - Sticky header + mobile hamburger (the live Wix nav fails on small screens)
 - Primary CTA: Schedule Exploratory Call → live Calendly (topic cards use “Request this session” into Contact, with Calendly still available)
 - Named testimonials as published (including Jack Kelly). Other quotes stay first name + last initial; no invented clients.
-- Client logo strip from the live site
+- Client logo strip from the live site, shown as a compact Trusted-by band directly under the homepage hero
 - Meta descriptions, `og:image`, Person + LocalBusiness schema, plus FAQPage on Contact and VideoObject for the overview reel
 - GitHub Pages project URL with `/mcchord-inc/` base path
 - Official speaker overview reel: [Jay McChord Overview Video](https://www.youtube.com/watch?v=d74fKmOc7TY) (McChord Inc. Marketing & Communications)
@@ -22,7 +22,7 @@ This repo now holds a **clean static recreation** of [mcchordinc.com](https://ww
 
 ## Phase 1 — quick wins on this stack — done (this pass)
 
-1. **Proof, without inventing clients.** Jack Kelly remains the only full-name testimonial already published. Homepage CTA now sits next to that quote plus the live-site logo strip. Other attributions still use first name + last initial and the role/org type Jay already publishes. Gerald A. uses the stronger published line from Contact (“Fortune 500 sales leader”). Quotes that only lived on About/Topics (Nancy W., Jim N.) are collected on Testimonials.
+1. **Proof, without inventing clients.** Jack Kelly remains the only full-name testimonial already published. The live-site logo strip is a compact Trusted-by band directly under the hero (same six logos only). The homepage CTA sits next to the Jack Kelly quote. Other attributions still use first name + last initial and the role/org type Jay already publishes. Gerald A. uses the stronger published line from Contact (“Fortune 500 sales leader”). Quotes that only lived on About/Topics (Nancy W., Jim N.) are collected on Testimonials.
 2. **Copy refresh.** COVID is no longer the primary frame. Headwinds are multi-generational teams, eight-second attention, and hybrid/AI-era chaos. Relevant Leadership stays the flagship. Sections are shorter and more scannable (headwind cards, split checklists).
 3. **Speaker reel near the hero.** Uses the real YouTube overview video. To swap it later: replace the video ID in the homepage iframe `src` (`index.html`, `#speaker-reel`) and the matching `VideoObject` URLs. Example: `https://www.youtube-nocookie.com/embed/YOUR_ID`.
 4. **Speaker one-sheet.** `speaker-sheet.html` is print-ready (browser Print / Save as PDF). `speaker-sheet.pdf` is the downloadable file. Bio, topics, Jack Kelly quote, logos, contact, and Calendly CTA. Regenerate the PDF after copy changes (headless Chrome against the local HTML).
