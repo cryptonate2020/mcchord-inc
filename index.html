@@ -66,8 +66,9 @@
       "name": "Jay McChord Overview Video",
       "description": "Overview of Jay McChord’s work on short attention spans, multi-generational communication, and Relevant Leadership.",
       "thumbnailUrl": "https://cryptonate2020.github.io/mcchord-inc/images/reel-poster.jpg",
-      "embedUrl": "https://www.youtube.com/embed/d74fKmOc7TY",
-      "contentUrl": "https://www.youtube.com/watch?v=d74fKmOc7TY"
+      "embedUrl": "https://www.youtube-nocookie.com/embed/d74fKmOc7TY",
+      "contentUrl": "https://www.youtube.com/watch?v=d74fKmOc7TY",
+      "url": "https://cryptonate2020.github.io/mcchord-inc/#speaker-reel"
     }
   ]
 }
@@ -121,18 +122,9 @@
             <a class="btn btn-ghost" href="topics.html">See most requested topics</a>
           </div>
         </div>
-        <div class="hero-media" id="speaker-reel">
-          <!-- Swap reel: change data-youtube and the facade href (current: https://www.youtube.com/watch?v=d74fKmOc7TY) -->
-          <div
-            class="video-frame hero-video"
-            data-youtube="d74fKmOc7TY"
-            data-youtube-title="Jay McChord Overview Video">
-            <a class="video-facade" href="https://www.youtube.com/watch?v=d74fKmOc7TY" target="_blank" rel="noopener noreferrer" aria-label="Play Jay McChord Overview Video">
-              <img src="images/reel-poster.jpg" width="1280" height="720" alt="" decoding="async">
-              <span class="video-play" aria-hidden="true"></span>
-            </a>
-          </div>
-        </div>
+        <figure class="hero-photo photo-slot">
+          <img src="images/jay-portrait.jpg" width="1200" height="1800" alt="Jay McChord, leadership and communication keynote speaker, standing in a navy blazer and smiling">
+        </figure>
       </div>
     </section>
 
@@ -150,17 +142,31 @@
       </div>
     </section>
 
-    <section class="reel-followup" aria-labelledby="reel-followup-heading">
-      <div class="wrap reel-followup-inner">
+    <section class="section-alt" id="speaker-reel">
+      <div class="wrap reel-grid">
         <div>
           <p class="eyebrow">See Jay in action</p>
-          <h2 id="reel-followup-heading" class="reel-followup-title">Speaker overview</h2>
+          <h2>Speaker overview</h2>
+          <p class="lede">A short overview of Jay’s work on eight-second attention spans, multi-generational communication, and Relevant Leadership.</p>
           <p class="reel-note">Official “Jay McChord Overview Video” from McChord Inc. Marketing &amp; Communications.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://calendly.com/jaymcchord/exploratory-call-30-minutes" target="_blank" rel="noopener noreferrer">Schedule Exploratory Call</a>
+            <a class="btn btn-outline" href="speaker-sheet.html">Download speaker one-sheet</a>
+            <a class="btn btn-outline" href="media.html">Media / press kit</a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a class="btn btn-outline" href="#speaker-reel">Watch the overview</a>
-          <a class="btn btn-outline" href="speaker-sheet.html">Download speaker one-sheet</a>
-          <a class="btn btn-outline" href="media.html#reel">Media / press kit</a>
+        <!-- Swap reel: replace the YouTube ID in data-youtube and the matching VideoObject URLs. Current: https://www.youtube.com/watch?v=d74fKmOc7TY -->
+        <div
+          class="video-frame"
+          data-youtube="d74fKmOc7TY"
+          data-youtube-title="Jay McChord Overview Video">
+          <button type="button" class="video-facade" aria-label="Play Jay McChord Overview Video">
+            <img src="images/reel-poster.jpg" width="1280" height="720" alt="" decoding="async">
+            <span class="video-play" aria-hidden="true"></span>
+          </button>
+          <noscript>
+            <a class="video-noscript" href="https://www.youtube.com/watch?v=d74fKmOc7TY" rel="noopener noreferrer">Watch Jay McChord Overview Video on YouTube</a>
+          </noscript>
         </div>
       </div>
     </section>
