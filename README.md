@@ -21,7 +21,9 @@ This repo is already configured as a GitHub Pages project site. Pages currently 
 | Services | `services.html` |
 | Topics | `topics.html` |
 | Testimonials | `testimonials.html` |
-| Contact (Calendly + form) | `contact.html` |
+| Contact (Calendly + form + planner FAQ) | `contact.html` |
+| Speaker one-sheet (print-ready) | `speaker-sheet.html` |
+| Speaker one-sheet PDF | `speaker-sheet.pdf` |
 
 Copy, phone (`859-492-6555`), email (`jay@mcchordinc.com`), Calendly (`jaymcchord/exploratory-call-30-minutes`), Lexington address (`781 Sunny Slope Trace`), and client logos were pulled from the live Wix site.
 
@@ -73,4 +75,4 @@ When you are ready to serve `mcchordinc.com` from this repo:
 
 ## Next phases
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md) for redesign recommendations (proof, copy refresh, topic productization). This v1 commit is the recreation baseline only.
+See [`docs/ROADMAP.md`](docs/ROADMAP.md). Phase 1 (proof, copy refresh, reel, one-sheet, planner FAQ) is implemented on this static stack. Later phases cover photography, topic productization, and the custom domain.
