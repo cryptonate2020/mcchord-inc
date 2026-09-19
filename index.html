@@ -121,9 +121,18 @@
             <a class="btn btn-ghost" href="topics.html">See most requested topics</a>
           </div>
         </div>
-        <figure class="hero-photo photo-slot">
-          <img src="images/jay-portrait.jpg" width="1200" height="1800" alt="Jay McChord, leadership and communication keynote speaker, standing in a navy blazer and smiling">
-        </figure>
+        <div class="hero-media" id="speaker-reel">
+          <!-- Swap reel: change data-youtube and the facade href (current: https://www.youtube.com/watch?v=d74fKmOc7TY) -->
+          <div
+            class="video-frame hero-video"
+            data-youtube="d74fKmOc7TY"
+            data-youtube-title="Jay McChord Overview Video">
+            <a class="video-facade" href="https://www.youtube.com/watch?v=d74fKmOc7TY" target="_blank" rel="noopener noreferrer" aria-label="Play Jay McChord Overview Video">
+              <img src="images/reel-poster.jpg" width="1280" height="720" alt="" decoding="async">
+              <span class="video-play" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -141,25 +150,17 @@
       </div>
     </section>
 
-    <section class="section-alt" id="speaker-reel">
-      <div class="wrap reel-grid">
+    <section class="reel-followup" aria-labelledby="reel-followup-heading">
+      <div class="wrap reel-followup-inner">
         <div>
           <p class="eyebrow">See Jay in action</p>
-          <h2>Speaker overview</h2>
-          <p class="lede">A short overview of Jay’s work on eight-second attention spans, multi-generational communication, and Relevant Leadership.</p>
+          <h2 id="reel-followup-heading" class="reel-followup-title">Speaker overview</h2>
           <p class="reel-note">Official “Jay McChord Overview Video” from McChord Inc. Marketing &amp; Communications.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://calendly.com/jaymcchord/exploratory-call-30-minutes" target="_blank" rel="noopener noreferrer">Schedule Exploratory Call</a>
-            <a class="btn btn-outline" href="speaker-sheet.html">Download speaker one-sheet</a>
-            <a class="btn btn-outline" href="media.html">Media / press kit</a>
-          </div>
         </div>
-        <!-- Swap reel: replace the YouTube ID in data-youtube, the facade href, and the matching VideoObject URLs. Current: https://www.youtube.com/watch?v=d74fKmOc7TY -->
-        <div class="video-frame" data-youtube="d74fKmOc7TY">
-          <a class="video-facade" href="https://www.youtube.com/watch?v=d74fKmOc7TY" target="_blank" rel="noopener noreferrer" aria-label="Play Jay McChord Overview Video">
-            <img src="images/reel-poster.jpg" width="1280" height="720" alt="" decoding="async">
-            <span class="video-play" aria-hidden="true"></span>
-          </a>
+        <div class="hero-actions">
+          <a class="btn btn-outline" href="#speaker-reel">Watch the overview</a>
+          <a class="btn btn-outline" href="speaker-sheet.html">Download speaker one-sheet</a>
+          <a class="btn btn-outline" href="media.html#reel">Media / press kit</a>
         </div>
       </div>
     </section>
