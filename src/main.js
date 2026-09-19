@@ -46,7 +46,36 @@ if (page) {
   });
 }
 
+const TOPIC_LABELS = {
+  "relevant-leadership": "Relevant Leadership",
+  differentiation: "Successfully Identifying & Articulating Your Differentiation & Value",
+  "times-of-chaos": "Leading, Communicating & Selling in Times of Chaos",
+  "move-audiences": "Move Any Audience to Action… Live or Virtually",
+  "virtual-professionalism": "Professionalism in the Virtual Environment",
+};
+
 if (form) {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get("topic");
+  if (requested) {
+    const label = TOPIC_LABELS[requested] || requested.replace(/[-+]/g, " ");
+    const select = form.querySelector("#topic");
+    const message = form.querySelector("#message");
+    if (select) {
+      const match = Array.from(select.options).find(
+        (option) => option.value === label || option.value === requested,
+      );
+      if (match) {
+        select.value = match.value;
+      } else if (select.querySelector('option[value="Relevant Leadership"]') && label.includes("Relevant Leadership")) {
+        select.value = "Relevant Leadership";
+      }
+    }
+    if (message && !message.value) {
+      message.value = `I'd like to request this session: ${label}.`;
+    }
+  }
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(form);
@@ -75,3 +104,7 @@ if (form) {
     }
   });
 }
+
+document.querySelectorAll("[data-print]").forEach((button) => {
+  button.addEventListener("click", () => window.print());
+});
