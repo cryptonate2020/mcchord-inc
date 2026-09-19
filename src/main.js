@@ -108,3 +108,32 @@ if (form) {
 document.querySelectorAll("[data-print]").forEach((button) => {
   button.addEventListener("click", () => window.print());
 });
+
+const YT_EMBED_PARAMS = new URLSearchParams({
+  autoplay: "1",
+  modestbranding: "1",
+  rel: "0",
+  iv_load_policy: "3",
+  playsinline: "1",
+  disablekb: "1",
+  controls: "1",
+});
+
+document.querySelectorAll(".video-frame[data-youtube]").forEach((frame) => {
+  const trigger = frame.querySelector(".video-facade");
+  const id = frame.dataset.youtube;
+  if (!trigger || !id) return;
+
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${YT_EMBED_PARAMS}`;
+    iframe.title = trigger.getAttribute("aria-label") || "Jay McChord Overview Video";
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframe.allowFullscreen = true;
+    frame.classList.add("is-playing");
+    frame.replaceChildren(iframe);
+  });
+});
