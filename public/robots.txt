@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cryptonate2020.github.io/mcchord-inc/sitemap.xml
