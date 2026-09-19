@@ -2,15 +2,15 @@
 
 Static recreation of [Jay McChord / McChord Inc.](https://www.mcchordinc.com) for public preview on GitHub Pages. Nate Richie (GitHub [@cryptonate2020](https://github.com/cryptonate2020)) owns this repo. Jay McChord is the client.
 
-This is a **clean multi-page static site** (Vite + vanilla HTML/CSS/JS). It is not a CMS. Unfinished live-site stubs (Mastermind, empty courses, Wix placeholder pages) are **not** recreated.
+This is a **plain multi-page static site** (HTML, CSS, and a little JS). There is no CMS and no required build step. Unfinished live-site stubs (Mastermind, empty courses, Wix placeholder pages) are **not** recreated.
 
-## Public preview URL
+## Public preview URL vs custom domain
 
 **GitHub Pages (project site):** [https://cryptonate2020.github.io/mcchord-inc/](https://cryptonate2020.github.io/mcchord-inc/)
 
 That URL is the review/staging site. Custom domain **mcchordinc.com** comes later (DNS at the registrar / Wix, then a CNAME in this repo). Do not point production DNS here until Jay is ready to cut over.
 
-The Vite `base` is `/mcchord-inc/` in production builds so CSS, JS, images, and internal links work under the project Pages path.
+This repo is already configured as a GitHub Pages project site. Pages currently publishes from the `main` branch, folder `/`. After this branch is merged, the HTML/CSS/JS at the repo root is what visitors see. All internal links and images use **relative paths**, so they resolve correctly under `/mcchord-inc/`.
 
 ## Pages
 
@@ -23,55 +23,53 @@ The Vite `base` is `/mcchord-inc/` in production builds so CSS, JS, images, and 
 | Testimonials | `testimonials.html` |
 | Contact (Calendly + form) | `contact.html` |
 
-Copy, phone (`859-492-6555`), email (`jay@mcchordinc.com`), Calendly (`jaymcchord/exploratory-call-30-minutes`), Lexington address, and client logos were pulled from the live Wix site.
+Copy, phone (`859-492-6555`), email (`jay@mcchordinc.com`), Calendly (`jaymcchord/exploratory-call-30-minutes`), Lexington address (`781 Sunny Slope Trace`), and client logos were pulled from the live Wix site.
 
 ## Local development
 
-```bash
-npm install
-npm run dev
-```
-
-Opens at `http://localhost:5173/`.
-
-Production-like preview (includes the `/mcchord-inc/` base path):
+No install required:
 
 ```bash
-npm run build
-npm run preview
+python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173/mcchord-inc/`.
+Then open `http://localhost:4173/`.
 
 ## GitHub Pages setup
 
-A GitHub Actions workflow (`.github/workflows/pages.yml`) builds the site and deploys to GitHub Pages on every push to `main`.
+Pages is **already enabled** on this repository:
 
-### One-time click for Nate (if Pages is not already enabled)
+- Source: `main` branch, folder `/` (legacy / “Deploy from a branch”)
+- Public URL: `https://cryptonate2020.github.io/mcchord-inc/`
+- HTTPS is on
+- Custom domain is not set yet
 
-1. Open **Settings → Pages** on this repository.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Push to `main` (or run the **Deploy GitHub Pages** workflow from the Actions tab).
-4. Confirm the site at `https://cryptonate2020.github.io/mcchord-inc/`.
+`/.nojekyll` tells GitHub not to run Jekyll on the files.
 
-The workflow needs `pages: write` and `id-token: write` (already set in the YAML). If the first deploy fails with a Pages permissions error, check **Settings → Actions → General → Workflow permissions**.
+### If the preview 404s after merge
 
-`public/.nojekyll` is copied into the build output so GitHub does not process the site with Jekyll.
+1. Open **Settings → Pages**.
+2. Confirm **Source** is **Deploy from a branch**.
+3. Branch: `main`, folder: `/ (root)`.
+4. Wait a minute for the Pages build, then hard-refresh the preview URL.
+
+### Optional: GitHub Actions instead of “deploy from a branch”
+
+Not required for this v1 site (there is no build). If you later add a bundler, add a workflow with `pages: write` and `id-token: write`, then switch **Settings → Pages → Source** to **GitHub Actions**.
 
 ### Custom domain (later)
 
 When you are ready to serve `mcchordinc.com` from this repo:
 
-1. Add a `CNAME` file (or set the custom domain in **Settings → Pages**).
-2. Change `base` in `vite.config.js` from `/mcchord-inc/` to `/`.
-3. Update canonical URLs in the HTML (or introduce a small site-url constant).
-4. Point DNS A/CNAME records away from Wix after a final content check.
+1. Set the custom domain in **Settings → Pages** (GitHub will add/expect a `CNAME` file).
+2. Point DNS A/CNAME records away from Wix after a final content check.
+3. Relative asset paths can stay as they are.
 
 ## Stack notes
 
-- **Why Vite?** Shared CSS/JS, correct `/mcchord-inc/` asset prefix, and a simple GitHub Actions build. The pages themselves are ordinary HTML.
 - **Contact form** opens a `mailto:` to `jay@mcchordinc.com` (no backend). Booking should go through Calendly.
-- **Photos** in `public/images/` are Jay’s existing site assets (resized for the web). Keep filenames so later shoots can drop into the same slots (`jay-portrait.jpg`, `jay-about.jpg`, `jay-stage.jpg`, `jay-wildcat.jpg`, `og-image.jpg`).
+- **Photos** in `images/` are Jay’s existing site assets (resized for the web). Keep filenames so later shoots can drop into the same slots (`jay-portrait.jpg`, `jay-about.jpg`, `jay-stage.jpg`, `jay-wildcat.jpg`, `og-image.jpg`).
+- Mobile nav is a real hamburger (the live Wix site breaks on small screens). A sticky **Book a call / phone** bar appears on small viewports.
 
 ## Next phases
 

@@ -1,6 +1,6 @@
 # Roadmap — after the v1 recreation
 
-This repo now holds a **clean static recreation** of [mcchordinc.com](https://www.mcchordinc.com): Home, Services, Topics, About, Contact, Testimonials. Stub/orphan Wix pages were left unpublished on purpose.
+This repo now holds a **clean static recreation** of [mcchordinc.com](https://www.mcchordinc.com): Home, Services, Topics, About, Contact, Testimonials. Stub/orphan Wix pages were left unpublished on purpose. GitHub Pages serves the files from `main` `/` (no build step).
 
 The attached redesign report (Sept 2026) should drive the next phases — not be fully implemented in v1.
 
