@@ -65,6 +65,7 @@
       "@type": "VideoObject",
       "name": "Jay McChord Overview Video",
       "description": "Overview of Jay McChord’s work on short attention spans, multi-generational communication, and Relevant Leadership.",
+      "thumbnailUrl": "https://cryptonate2020.github.io/mcchord-inc/images/reel-poster.jpg",
       "embedUrl": "https://www.youtube.com/embed/d74fKmOc7TY",
       "contentUrl": "https://www.youtube.com/watch?v=d74fKmOc7TY"
     }
@@ -153,15 +154,12 @@
             <a class="btn btn-outline" href="media.html">Media / press kit</a>
           </div>
         </div>
-        <!-- Swap reel: replace the YouTube ID in the iframe src. Current: https://www.youtube.com/watch?v=d74fKmOc7TY -->
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/d74fKmOc7TY"
-            title="Jay McChord Overview Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            loading="lazy"></iframe>
+        <!-- Swap reel: replace the YouTube ID in data-youtube, the facade href, and the matching VideoObject URLs. Current: https://www.youtube.com/watch?v=d74fKmOc7TY -->
+        <div class="video-frame" data-youtube="d74fKmOc7TY">
+          <a class="video-facade" href="https://www.youtube.com/watch?v=d74fKmOc7TY" target="_blank" rel="noopener noreferrer" aria-label="Play Jay McChord Overview Video">
+            <img src="images/reel-poster.jpg" width="1280" height="720" alt="" decoding="async">
+            <span class="video-play" aria-hidden="true"></span>
+          </a>
         </div>
       </div>
     </section>
@@ -215,7 +213,6 @@
         </div>
         <figure class="photo-slot">
           <img src="images/jay-stage.jpg" width="1200" height="1469" alt="Jay McChord seated, smiling, in a navy blazer">
-          <figcaption>Jay McChord · seated portrait from his McChord Inc. photo session</figcaption>
         </figure>
       </div>
     </section>
@@ -308,7 +305,6 @@
       <div class="wrap split">
         <figure class="photo-slot">
           <img src="images/jay-about.jpg" width="1600" height="1067" alt="Jay McChord seated on a sofa in a navy suit and lavender tie">
-          <figcaption>Environmental portrait · Lexington session</figcaption>
         </figure>
         <div>
           <p class="eyebrow">About Jay</p>
