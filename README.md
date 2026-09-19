@@ -21,6 +21,7 @@ This repo is already configured as a GitHub Pages project site. Pages currently 
 | Services | `services.html` |
 | Topics | `topics.html` |
 | Testimonials | `testimonials.html` |
+| Media / press kit | `media.html` |
 | Contact (Calendly + form + planner FAQ) | `contact.html` |
 | Speaker one-sheet (print-ready) | `speaker-sheet.html` |
 | Speaker one-sheet PDF | `speaker-sheet.pdf` |
@@ -70,9 +71,9 @@ When you are ready to serve `mcchordinc.com` from this repo:
 ## Stack notes
 
 - **Contact form** opens a `mailto:` to `jay@mcchordinc.com` (no backend). Booking should go through Calendly.
-- **Photos** in `images/` are Jay’s existing site assets (resized for the web). Keep filenames so later shoots can drop into the same slots (`jay-portrait.jpg`, `jay-about.jpg`, `jay-stage.jpg`, `jay-wildcat.jpg`, `og-image.jpg`).
+- **Photos** in `images/` are Jay’s existing McChord Inc. assets (resized for the web). Keep filenames so later shoots can drop into the same slots (`jay-portrait.jpg`, `jay-headshot.jpg`, `jay-about.jpg`, `jay-stage.jpg`, `jay-wildcat.jpg`, `og-image.jpg`). The live site does not currently publish a stage/audience still — use the overview reel for that. Do not replace these with stock.
 - Mobile nav is a real hamburger (the live Wix site breaks on small screens). A sticky **Book a call / phone** bar appears on small viewports.
 
 ## Next phases
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md). Phase 1 (proof, copy refresh, reel, one-sheet, planner FAQ) is implemented on this static stack. Later phases cover photography, topic productization, and the custom domain.
+See [`docs/ROADMAP.md`](docs/ROADMAP.md). Phase 1 (proof, copy refresh, reel, one-sheet, planner FAQ) and Phase 2 (photo system, topic takeaways, media kit, Working-with-Jay process) are implemented on this static stack. Phase 3 covers insights, topic URLs, case studies, and the custom domain.
