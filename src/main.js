@@ -109,6 +109,7 @@ document.querySelectorAll("[data-print]").forEach((button) => {
   button.addEventListener("click", () => window.print());
 });
 
+const YOUTUBE_ID_PATTERN = /^[\w-]{11}$/;
 const YT_EMBED_PARAMS = new URLSearchParams({
   autoplay: "1",
   modestbranding: "1",
@@ -117,23 +118,49 @@ const YT_EMBED_PARAMS = new URLSearchParams({
   playsinline: "1",
   disablekb: "1",
   controls: "1",
+  fs: "0",
 });
+
+function loadYouTubePlayer(frame) {
+  if (frame.dataset.loaded === "true") return;
+  const id = String(frame.dataset.youtube || "").trim();
+  if (!YOUTUBE_ID_PATTERN.test(id)) return;
+
+  frame.dataset.loaded = "true";
+  const trigger = frame.querySelector(".video-facade");
+  const iframe = document.createElement("iframe");
+  iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${YT_EMBED_PARAMS}`;
+  iframe.title =
+    frame.dataset.youtubeTitle ||
+    trigger?.getAttribute("aria-label") ||
+    "Jay McChord Overview Video";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+  iframe.setAttribute("width", "560");
+  iframe.setAttribute("height", "315");
+  frame.classList.add("is-playing");
+  frame.replaceChildren(iframe);
+}
 
 document.querySelectorAll(".video-frame[data-youtube]").forEach((frame) => {
   const trigger = frame.querySelector(".video-facade");
-  const id = frame.dataset.youtube;
-  if (!trigger || !id) return;
+  if (!trigger) return;
+
+  trigger.addEventListener(
+    "pointerenter",
+    () => {
+      const hint = document.createElement("link");
+      hint.rel = "preconnect";
+      hint.href = "https://www.youtube-nocookie.com";
+      hint.crossOrigin = "";
+      document.head.appendChild(hint);
+    },
+    { once: true },
+  );
 
   trigger.addEventListener("click", (event) => {
     event.preventDefault();
-    const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${YT_EMBED_PARAMS}`;
-    iframe.title = trigger.getAttribute("aria-label") || "Jay McChord Overview Video";
-    iframe.allow =
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-    iframe.allowFullscreen = true;
-    frame.classList.add("is-playing");
-    frame.replaceChildren(iframe);
+    loadYouTubePlayer(frame);
   });
 });
