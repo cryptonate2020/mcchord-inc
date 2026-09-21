@@ -471,6 +471,114 @@ p {
   margin-bottom: 0;
 }
 
+.in-room-block {
+  margin-top: 2.4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.in-room-block h2 {
+  margin-bottom: 0.45rem;
+}
+
+.in-room-block > .lede {
+  margin-bottom: 1.15rem;
+}
+
+.in-room-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin: 0 0 1.5rem;
+}
+
+.in-room-strip img,
+.speaking-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(10, 35, 72, 0.12);
+}
+
+.in-room-strip img {
+  aspect-ratio: 3 / 4;
+}
+
+.speaking-follow {
+  margin-top: 2.6rem;
+}
+
+.speaking-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.speaking-gallery img {
+  aspect-ratio: 3 / 4;
+}
+
+.speaking-gallery .is-wide {
+  aspect-ratio: 4 / 3;
+}
+
+.li-share {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(10, 35, 72, 0.04);
+}
+
+.li-share-body {
+  padding: 1.15rem 1.2rem 1.35rem;
+}
+
+.li-share-body .eyebrow {
+  margin-bottom: 0.7rem;
+}
+
+.li-share-body .lede {
+  margin-bottom: 0;
+}
+
+.li-share-footer {
+  padding-top: 0.35rem;
+}
+
+.li-embed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f3f2ef;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.li-embed iframe {
+  display: block;
+  width: min(100%, 504px);
+  min-height: 760px;
+  height: 760px;
+  border: 0;
+}
+
+.li-embed img {
+  width: 100%;
+  max-height: 28rem;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.li-share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
 .photo-slot {
   position: relative;
 }
@@ -1283,8 +1391,18 @@ textarea {
   }
 
   .process-steps,
-  .photo-kit {
+  .photo-kit,
+  .speaking-gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .speaking-gallery .is-wide {
+    grid-column: span 2;
+  }
+
+  .in-room-strip {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
   }
 
   .footer-grid {
