@@ -71,7 +71,7 @@ When you are ready to serve `mcchordinc.com` from this repo:
 ## Stack notes
 
 - **Contact form** opens a `mailto:` to `jay@mcchordinc.com` (no backend). Booking should go through Calendly.
-- **Photos** in `images/` are Jay’s existing McChord Inc. assets (resized for the web). Keep filenames so later shoots can drop into the same slots (`jay-portrait.jpg`, `jay-headshot.jpg`, `jay-about.jpg`, `jay-stage.jpg`, `jay-wildcat.jpg`, `og-image.jpg`). The homepage hero uses Jay’s portrait; the official YouTube overview reel (`d74fKmOc7TY`) is a click-to-play facade in the mid-page `#speaker-reel` section (and on the media kit). Do not replace these with stock.
+- **Photos** in `images/` are Jay’s McChord Inc. assets (resized for the web). Keep studio filenames so later shoots can drop into the same slots (`jay-portrait.jpg`, `jay-headshot.jpg`, `jay-about.jpg`, `jay-stage.jpg`, `jay-wildcat.jpg`, `og-image.jpg`). Live-session proof shots are `jay-speaking-01.jpg` … `jay-speaking-08.jpg`. The homepage hero uses Jay’s portrait; the official YouTube overview reel (`d74fKmOc7TY`) is a click-to-play facade in the mid-page `#speaker-reel` section (and on the media kit), with a compact “Jay in the room” strip and an “As shared on LinkedIn” card underneath. Do not replace these with stock.
 - Mobile nav is a real hamburger (the live Wix site breaks on small screens). A sticky **Book a call / phone** bar appears on small viewports.
 
 ## Next phases

@@ -33,7 +33,7 @@ This repo now holds a **clean static recreation** of [mcchordinc.com](https://ww
 
 ## Phase 2 — conversion redesign — done (this pass)
 
-1. **Photo/brand system.** Existing Jay portraits from the live McChord Inc. site are reused in the same slots, with sharper web sizes and cobalt frames. Visible photo captions were removed; meaningful `alt` text stays on the images. Official headshot (`jay-headshot.jpg` / `jay-portrait.jpg`), seated portrait (`jay-stage.jpg`), environmental (`jay-about.jpg`). The live Wix library has **no stage/audience stills** (only studio portraits, the UK Wildcat photo, and logos). No stock was added. Stage presence is the official YouTube overview reel. A dedicated stage/audience shoot can drop into `jay-stage.jpg` later without layout changes.
+1. **Photo/brand system.** Existing Jay portraits from the live McChord Inc. site are reused in the same slots, with sharper web sizes and cobalt frames. Visible photo captions were removed; meaningful `alt` text stays on the images. Official headshot (`jay-headshot.jpg` / `jay-portrait.jpg`), seated portrait (`jay-stage.jpg` — kept as a studio download on the media kit), environmental (`jay-about.jpg`). Live-session stills (`jay-speaking-01.jpg` … `08`) now supply stage/audience proof on Home, About, and Media. The homepage Relevant Leadership slot uses a real speaking photo instead of the seated studio frame. No stock was added.
 2. **Topic cards with takeaways.** Topics page (and homepage topic highlights) now name **who it’s for** and **Monday-morning takeaways** for each of the five published sessions. **Request this session** still opens `contact.html?topic=…` (form prefill); Calendly stays one click away.
 3. **Media / press kit.** New `media.html` in header + footer: short bio, long bio, downloadable headshots, one-sheet link, topic list, reel embed, phone/email/Calendly. About page puts credentials up top, story below.
 4. **Working with Jay.** Planner-friendly 3-step process on Home, Services, and Contact: Brief (exploratory call) → Customize (30 min–full day, live/virtual/hybrid) → Deliver & debrief.
@@ -45,6 +45,6 @@ This repo now holds a **clean static recreation** of [mcchordinc.com](https://ww
 2. Individual topic URLs (`topics/relevant-leadership.html`).
 3. Case studies (sales team, nonprofit facilitation, association keynote) — only with Jay’s permission and real outcomes.
 4. Custom domain `mcchordinc.com` once Jay signs off (see README).
-5. Stage/audience photo shoot (keynote mid-gesture, audience reaction) to replace the seated-portrait slot in `jay-stage.jpg` when Jay has real stills. Do not use stock.
+5. Stage/audience stills from Jay’s live sessions are on the site (`jay-speaking-01.jpg` …). Keep adding stronger keynote/audience reaction frames if Jay sends more; do not use stock.
 
 North star from the report: meeting planners should understand *who Jay is, what he delivers Monday morning, who trusts him, and how to book* in under eight seconds of scroll.
