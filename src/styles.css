@@ -550,6 +550,8 @@ p {
 
 .li-embed {
   width: 100%;
+  display: flex;
+  justify-content: center;
   background: #f3f2ef;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -557,9 +559,9 @@ p {
 
 .li-embed iframe {
   display: block;
-  width: 100%;
-  min-height: 640px;
-  height: 640px;
+  width: min(100%, 504px);
+  min-height: 760px;
+  height: 760px;
   border: 0;
 }
 
