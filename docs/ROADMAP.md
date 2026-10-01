@@ -7,7 +7,7 @@ This repo now holds a **clean static recreation** of [mcchordinc.com](https://ww
 - Personal-brand header (Jay McChord + McChord Inc. legal/footer)
 - Sticky header + mobile hamburger (the live Wix nav fails on small screens)
 - Primary CTA: Schedule Exploratory Call → live Calendly (topic cards use “Request this session” into Contact, with Calendly still available)
-- Named testimonials as published (including Jack Kelly). Other quotes stay first name + last initial; no invented clients.
+- Named testimonials as published (including Jack Kelly) plus Brandon Bullard, Vice President of Sales & Marketing, CLARK Material Handling. Other quotes stay first name + last initial; no invented clients.
 - Client logo strip from the live site, shown as a compact Trusted-by band directly under the homepage hero
 - Meta descriptions, `og:image`, Person + LocalBusiness schema, plus FAQPage on Contact and VideoObject for the overview reel
 - GitHub Pages project URL with `/mcchord-inc/` base path
@@ -24,7 +24,7 @@ This repo now holds a **clean static recreation** of [mcchordinc.com](https://ww
 
 ## Phase 1 — quick wins on this stack — done (this pass)
 
-1. **Proof, without inventing clients.** Jack Kelly remains the only full-name testimonial already published. The live-site logo strip is a compact Trusted-by band directly under the hero (same six logos only). The homepage CTA sits next to the Jack Kelly quote. Other attributions still use first name + last initial and the role/org type Jay already publishes. Gerald A. uses the stronger published line from Contact (“Fortune 500 sales leader”). Quotes that only lived on About/Topics (Nancy W., Jim N.) are collected on Testimonials.
+1. **Proof, without inventing clients.** Jack Kelly remains the full-name testimonial already published on the live site. Brandon Bullard (Vice President of Sales & Marketing, CLARK Material Handling) is an additional fully attributed client quote on Testimonials and as the homepage featured quote. The live-site logo strip is a compact Trusted-by band directly under the hero (same six logos only). The homepage CTA sits next to the Jack Kelly quote. Other attributions still use first name + last initial and the role/org type Jay already publishes. Gerald A. uses the stronger published line from Contact (“Fortune 500 sales leader”). Quotes that only lived on About/Topics (Nancy W., Jim N.) are collected on Testimonials.
 2. **Copy refresh.** COVID is no longer the primary frame. Headwinds are multi-generational teams, eight-second attention, and hybrid/AI-era chaos. Relevant Leadership stays the flagship. Sections are shorter and more scannable (headwind cards, split checklists).
 3. **Speaker reel near the hero.** Uses the real YouTube overview video (`d74fKmOc7TY`) behind a click-to-play facade in the mid-page `#speaker-reel` section (portrait stays in the hero). Poster + play button; click loads a stripped `youtube-nocookie` iframe in place (`modestbranding=1`, `rel=0`, `iv_load_policy=3`, `playsinline=1`, `disablekb=1`, `controls=1`, `fs=0`, `autoplay=1`) — it does not open YouTube in a new tab. To swap it later: replace the video ID in `data-youtube` (`index.html` `#speaker-reel`; also `media.html`) and the matching `VideoObject` URLs.
 4. **Speaker one-sheet.** `speaker-sheet.html` is print-ready (browser Print / Save as PDF). `speaker-sheet.pdf` is the downloadable file. Bio, topics, Jack Kelly quote, logos, contact, and Calendly CTA. Regenerate the PDF after copy changes (headless Chrome against the local HTML).

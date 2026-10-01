@@ -814,6 +814,14 @@ section {
   color: var(--steel);
 }
 
+.quote-source cite {
+  font-style: normal;
+}
+
+.testimonial-grid blockquote {
+  margin: 0;
+}
+
 /* Cards */
 .cards {
   display: grid;
